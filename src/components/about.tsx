@@ -23,24 +23,20 @@ const benefitsData = [
 const useOnScreen = (options: IntersectionObserverInit) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
-    if (!ref.current) return;
-
+    const currentRef = ref.current;
+    if (!currentRef) return;
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
         observer.unobserve(entry.target);
       }
     }, options);
-
-    observer.observe(ref.current);
-
+    observer.observe(currentRef);
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      observer.unobserve(currentRef);
     };
-  }, [ref, options]);
-
+  }, [options]);
   return [ref, isVisible] as const;
 };
 
@@ -101,7 +97,7 @@ const TerminalTyping = () => {
   );
 };
 const AboutSection = () => {
-  const [ref, isVisible] = useOnScreen({ threshold: 0.2 });
+  const [ref, _isVisible] = useOnScreen({ threshold: 0.2 });
 
   return (
     <section id="about" className="bg-black py-20 px-6">
