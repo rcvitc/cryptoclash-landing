@@ -14,7 +14,7 @@ type Link = {
 };
 
 const Navbar = ({ isMobile }: { isMobile: boolean }) => {
-  const linksToShow: Link = [];
+  const linksToShow: Link[] = [];
   navLinks.forEach((link) => {
     if (isMobile && link.mobile) {
       linksToShow.push(link);
