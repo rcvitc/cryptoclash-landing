@@ -97,7 +97,7 @@ const TerminalTyping = () => {
   );
 };
 const AboutSection = () => {
-  const [ref, _isVisible] = useOnScreen({ threshold: 0.2 });
+  const [ref] = useOnScreen({ threshold: 0.2 });
 
   return (
     <section id="about" className="bg-black py-20 px-6">
@@ -114,7 +114,7 @@ const AboutSection = () => {
             Why Join <span className="text-[#fead51]">Cryptoclash 2.0?</span>
           </h2>
           <p className="text-lg text-gray-300 leading-relaxed mb-8">
-            Get ready to dive into the ultimate battlefield of brainpower. Cryptoclash 2.0 is not just an event—it's a challenge that separates the best from the rest. Crack codes, break ciphers, and earn your place among the elite.
+            Get ready to dive into the ultimate battlefield of brainpower. Cryptoclash 2.0 is not just an event—it&apos;s a challenge that separates the best from the rest. Crack codes, break ciphers, and earn your place among the elite.
           </p>
 
           <div className="space-y-6">
