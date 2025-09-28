@@ -14,8 +14,8 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start">
             <img
               alt="Robotics Club Logo"
-              className="h-12 w-auto mb-4"
-              src="./logo.png"
+              className="h-18 w-auto mb-4"
+              src="./logo.svg"
             />
             <p className="text-gray-400 mt-2">
               Email:{" "}
@@ -28,7 +28,7 @@ export default function Footer() {
             </p>
             <div>
               {Object.entries(contacts).map(([name, phone]) => (
-                <p key={name} className="text-gray-400 py-2">
+                <p key={name} className="text-gray-400 py-1">
                   {name}:{" "}
                   <a
                     className="hover:text-[#fead53] transition-colors underline underline-offset-2"
