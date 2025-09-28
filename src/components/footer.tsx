@@ -1,4 +1,6 @@
+"use client";
 import { Github, Instagram, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 const contacts = {
   "Samanyu Gupta": "919188781844",
@@ -12,7 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           {/* Contact Info */}
           <div className="flex flex-col items-center md:items-start">
-            <img
+            <Image
               alt="Robotics Club Logo"
               className="h-18 w-auto mb-4"
               src="./logo.svg"

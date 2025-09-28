@@ -1,5 +1,5 @@
 "use client";
-import { BrainCircuit, Crown, Terminal, Trophy } from "lucide-react";
+import { BrainCircuit, Crown, Trophy } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
 
 const benefitsData = [

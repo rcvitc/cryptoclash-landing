@@ -1,3 +1,4 @@
+"use client";
 const navLinks = [
   { href: "#hero", label: "Home", mobile: true },
   { href: "#about", label: "About", mobile: false },

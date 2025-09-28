@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { Binary, CircuitBoard, Earth, Key, Layers, Puzzle, Search } from 'lucide-react';
 

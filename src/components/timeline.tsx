@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect, useRef } from "react";
 
 type TimelineItemType = {
@@ -10,17 +11,19 @@ const useOnScreen = (options?: IntersectionObserverInit) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    const currentRef = ref.current;
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
         observer.unobserve(entry.target);
       }
     }, options);
-    if (ref.current) observer.observe(ref.current);
+    if (currentRef) observer.observe(currentRef);
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (currentRef) observer.unobserve(currentRef);
     };
-  }, [ref, options]);
+  }, [options]);
   return [ref, isVisible] as const;
 };
 
