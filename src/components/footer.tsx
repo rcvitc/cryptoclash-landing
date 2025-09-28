@@ -18,6 +18,8 @@ export default function Footer() {
               alt="Robotics Club Logo"
               className="h-18 w-auto mb-4"
               src="./logo.svg"
+              width={150}
+              height={100}
             />
             <p className="text-gray-400 mt-2">
               Email:{" "}

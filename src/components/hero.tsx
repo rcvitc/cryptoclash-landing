@@ -47,6 +47,8 @@ const HeroSection = ({ isMobile }: { isMobile: boolean }) => (
             const el = document.getElementById("register");
             if (el) {
               el.scrollIntoView({ behavior: "smooth" });
+            } else {
+              window.open("https://chat.whatsapp.com/Iaz9WK1UtZK3m2vhh63Ka4", "_blank");
             }
           }}
           className="pointer-events-auto mt-8 px-8 py-3 bg-[#fead51] text-black font-bold rounded-lg shadow-[0_0_15px_#fead51] hover:scale-105 hover:bg-white transition-all duration-300"
